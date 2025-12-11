@@ -1,1 +1,23 @@
-
+[
+  {
+    "id": "JS-01",
+    "topic": "Asynchronous JS",
+    "question": "Explain the Event Loop and its components (Heap, Stack, Queue).",
+    "solution": "The Event Loop is a concept that continuously checks if the Call Stack is empty. If it is, it takes pending tasks from the Message Queue (or Microtask Queue) and pushes them onto the Call Stack for execution. This mechanism ensures non-blocking I/O operations."
+  },
+  {
+    "id": "JS-02",
+    "topic": "Coding/Performance",
+    "question": "Write a function to implement debouncing in JavaScript.",
+    "solution": {
+      "type": "code",
+      "code": "function debounce(func, delay) {\n  let timeoutId;\n  return function(...args) {\n    clearTimeout(timeoutId);\n    timeoutId = setTimeout(() => {\n      func.apply(this, args);\n    }, delay);\n  };\n}"
+    }
+  },
+  {
+    "id": "JS-03",
+    "topic": "Scoping/ES6",
+    "question": "What is the Temporal Dead Zone (TDZ) in JavaScript?",
+    "solution": "The TDZ is the period of time during which 'let' and 'const' variables exist but cannot be accessed. They are block-scoped and are only initialized when the execution reaches their declaration line, unlike 'var' which is hoisted and initialized with 'undefined'."
+  }
+]
