@@ -1,1 +1,134 @@
+/* --------------------------------------
+   1. GLOBAL & BASE STYLES
+   -------------------------------------- */
+:root {
+    --primary-color: #007bff; /* Blue */
+    --success-color: #28a745; /* Green for success/show */
+    --secondary-color: #6c757d; /* Gray */
+    --background-light: #f8f9fa; /* Light background */
+    --background-white: #ffffff;
+    --border-color: #e9ecef;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: #343a40;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #34334f;
+    margin-top: 0;
+}
+
+/* Container for Mobile and Desktop Centering */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px; /* Comfortable padding for mobile */
+}
+
+/* --------------------------------------
+   2. BUTTONS & HEADER
+   -------------------------------------- */
+#global-refresh-button {
+    width: 100%; /* Full width on mobile */
+    padding: 15px 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--background-white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+#global-refresh-button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+#global-refresh-button:disabled {
+    background-color: var(--secondary-color);
+    cursor: wait;
+}
+
+/* --------------------------------------
+   3. QUESTION & SOLUTION CARDS
+   -------------------------------------- */
+.topic-container ol {
+    list-style: none;
+    padding: 0;
+}
+
+.question-item {
+    background: var(--background-white);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.question-header strong {
+    color: var(--primary-color);
+    display: block; 
+    margin-bottom: 5px;
+}
+
+/* Solution Area Styling */
+.toggle-solution {
+    background: var(--success-color); 
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.toggle-solution:hover {
+    background-color: #1e7e34;
+}
+
+.solution-content {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #e2f0e8; /* Light green background */
+    border-left: 5px solid var(--success-color);
+    border-radius: 4px;
+    overflow-x: auto; /* Ensures code blocks are scrollable on small screens */
+}
+
+/* Code block styling */
+.solution-content pre {
+    background-color: #343a40; /* Dark background for code */
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    white-space: pre-wrap; /* Allows long lines to wrap */
+}
+
+/* --------------------------------------
+   4. MEDIA QUERIES (Desktop Optimization)
+   -------------------------------------- */
+@media (min-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    #global-refresh-button {
+        width: 50%; /* Center the button and make it a cleaner width */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
