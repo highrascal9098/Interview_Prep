@@ -1,1 +1,23 @@
-
+[
+  {
+    "id": "JS-01",
+    "topic": "Synchronization",
+    "question": "Describe the Implicit Wait vs. Explicit Wait in Selenium.",
+    "solution": "Implicit Wait sets a timeout for WebDriver to wait for elements *across the entire session* before throwing an exception. Explicit Wait is used for specific conditions (e.g., element to be clickable) on *specific elements*, offering more control."
+  },
+  {
+    "id": "JS-02",
+    "topic": "Core Java/OOP",
+    "question": "Explain the concept of Encapsulation in Java.",
+    "solution": "Encapsulation is the mechanism of wrapping data (variables) and code acting on the data (methods) together as a single unit. In Java, this is achieved by declaring instance variables as private and providing public setter and getter methods."
+  },
+  {
+    "id": "JS-03",
+    "topic": "Configuration",
+    "question": "How do you handle a browser certificate error in Selenium with Java?",
+    "solution": {
+      "type": "code",
+      "code": "// Java Example using ChromeOptions\nChromeOptions options = new ChromeOptions();\noptions.setAcceptInsecureCerts(true);\nWebDriver driver = new ChromeDriver(options);"
+    }
+  }
+]
