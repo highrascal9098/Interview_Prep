@@ -1,1 +1,23 @@
-
+[
+  {
+    "id": "P-01",
+    "topic": "Architecture",
+    "question": "What is Playwright's main advantage over older tools like WebDriver?",
+    "solution": "Playwright runs out-of-process, meaning it is not bound by the limitations of the browser's JavaScript environment. Its main advantages are native auto-waiting, context isolation, and simultaneous cross-browser testing."
+  },
+  {
+    "id": "P-02",
+    "topic": "Debugging",
+    "question": "How do you debug Playwright tests using the built-in tooling?",
+    "solution": "By setting the environmental variable PLAYWRIGHT_DEBUG=1 before running tests, the Playwright Inspector will launch, allowing step-by-step execution, exploration of selectors, and viewing the action log."
+  },
+  {
+    "id": "P-03",
+    "topic": "Web Actions",
+    "question": "Write a Playwright snippet to handle an alert/modal dialog, accepting it.",
+    "solution": {
+      "type": "code",
+      "code": "// TypeScript/JavaScript Example\npage.on('dialog', async dialog => {\n    await dialog.accept();\n});\nawait page.click('#trigger-alert-button');"
+    }
+  }
+]
